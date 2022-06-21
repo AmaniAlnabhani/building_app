@@ -28,4 +28,6 @@ Route::view('services','/layouts/services');
 Route::get('custom/login','CustomAuthCountroller@login');
 Route::get('custom/login/{id}','CustomAuthCountroller@CustomLogin');
 Route::get('/issues/list','IssuesController@list');
+Route::post('/issues/import','IssuesController@importFromExcel');
+Route::view('issue-form','excel-import');
 Route::get('users','UserController@export');
